@@ -285,7 +285,9 @@ body::-webkit-scrollbar-thumb {
     .nav-link {
         justify-content: center;
     }
-
+    .nav-link svg {
+        margin: 0 1.3rem;
+    }
     .main {
         margin: 0;
     }
