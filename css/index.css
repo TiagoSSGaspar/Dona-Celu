@@ -1,5 +1,6 @@
 :root {
     font-size: 16px;
+    font-weight: 400;
     font-family: 'Open Sans', sans-serif, "Helvetica Neue";
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
@@ -9,8 +10,8 @@
 }
 
 body {
-    color: black;
-    background-color: white;
+    color: var(--bg-secondary);
+    background-color: var(--text-secondary);
     margin: 0;
     padding: 0;
 }
@@ -27,7 +28,7 @@ body::-webkit-scrollbar-thumb {
     background: #6649b8;
 }
 
-main {
+.main {
     margin-left: 5rem;
     padding: 1rem;
 }
@@ -37,6 +38,7 @@ main {
     background-color: var(--bg-primary);
     transition: width 600ms ease;
     overflow: scroll;
+    z-index: 100;
 }
 
 .navbar-nav {
@@ -128,6 +130,141 @@ main {
     transform: rotate(-180deg);
 }
 
+/********************** Main area ***************************/
+
+.header-video-parallax-home {
+    position: relative;
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.header-video-parallax-home:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #413b46, transparent);
+    z-index: 1;
+}
+
+.header-video-parallax-home video {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#logoVideo {
+    width: 50vw;
+    opacity: 70%;
+    position: relative;
+}
+
+.contentSecProducts {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contentSecProducts .textBox {
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.contentSecProducts .textBox h2 {
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: 700;
+    color: var(--bg-primary);
+    margin-bottom: 10px;
+}
+
+.contentSecProducts p {
+    color: var(--bg-secondary);
+}
+
+.contentSecProducts .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #df49a6;
+    color: var(--bg-secondary);
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/********* slider products *******/
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 180px;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    position: absolute;
+    bottom: 150px;
+    max-height: 100%;
+}
+
+.contentSecProducts .imgBoxProducts {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contentSecProducts .imgBoxProducts img {
+    max-width: 150px;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 150px 40px;
+    }
+
+    .contentSecProducts {
+        flex-direction: column;
+    }
+
+    .contentSecProducts .textBox,
+    .contentSecProducts .imgBoxProducts {
+        max-width: 100%;
+    }
+
+    .swiper-slide {
+        height: 300px;
+    }
+}
+
+
+
 /* Tela Pequena */
 @media only screen and (max-width: 600px) {
     .navbar {
@@ -149,9 +286,7 @@ main {
         justify-content: center;
     }
 
-
-
-    main {
+    .main {
         margin: 0;
     }
 }
@@ -219,3 +354,4 @@ main {
 .solar #solarIcon {
     display: block;
 }
+
