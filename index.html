@@ -117,7 +117,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#Produtos" class="nav-link">
                 <svg id="Layer_1" style="enable-background:new 0 0 30 30;" viewBox="0 0 30 30"
                      xml:space="preserve"
                      xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +278,7 @@
         </li>
 
         <li class="nav-item" id="themeButton">
-            <a href="#" class="nav-link">
+            <a class="nav-link">
                 <svg
                         id="lightIcon"
                         aria-hidden="true"
@@ -351,7 +351,7 @@
                         ></path>
                     </g>
                 </svg>
-                <span class="link-text">Mudar tema</span>
+                <span class="link-text">Tema</span>
             </a>
         </li>
     </ul>
@@ -366,7 +366,7 @@
     <section class="products-content">
         <div class="contentSecProducts">
             <div class="textBox">
-                <h2>Produtos</h2>
+                <h2 id="Produtos">Produtos</h2>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -375,7 +375,7 @@
                     with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
                     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
-                <a href="#">Lorem Ipsum</a>
+                <!-- <a href="#">Lorem Ipsum</a> -->
             </div>
             <div class="imgBoxProducts">
                 <!-- Swiper -->
@@ -411,6 +411,10 @@
             depth: 200,
             modifier: 1,
             slideShadows: true,
+        },
+        autoplay: {
+            delay: 2200,
+            disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
