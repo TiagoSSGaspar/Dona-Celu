@@ -169,7 +169,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 
-.contentSecProducts {
+.content-section-products {
     position: relative;
     width: 100%;
     display: flex;
@@ -177,12 +177,12 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-.contentSecProducts .textBox {
+.content-section-products .text-box-content-products {
     position: relative;
     max-width: 600px;
 }
 
-.contentSecProducts .textBox h2 {
+.content-section-products .text-box-content-products h2 {
     justify-content: center;
     text-align: center;
     font-size: 3em;
@@ -192,12 +192,12 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 10px;
 }
 
-.contentSecProducts p {
+.content-section-products p {
     text-align: center;
     color: var(--bg-secondary);
 }
 
-.contentSecProducts .textBox a {
+.content-section-products .text-box-content-products a {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
@@ -232,13 +232,13 @@ body::-webkit-scrollbar-thumb {
     max-height: 100%;
 }
 
-.contentSecProducts .imgBoxProducts {
+.content-section-products .img-box-products {
     width: 500px;
     display: flex;
     justify-content: flex-end;
 }
 
-.contentSecProducts .imgBoxProducts img {
+.content-section-products .img-box-products img {
     max-width: 150px;
 }
 
@@ -249,12 +249,12 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 991px) {
 
-    .contentSecProducts {
+    .content-section-products {
         flex-direction: column;
     }
 
-    .contentSecProducts .textBox,
-    .contentSecProducts .imgBoxProducts {
+    .content-section-products .text-box-content-products,
+    .content-section-products .img-box-products {
         max-width: 100%;
     }
 
@@ -365,6 +365,134 @@ body::-webkit-scrollbar-thumb {
     display: block;
 }
 
-.navegationPage {
-    visibility: hidden;
+/********* section about ********/
+
+.about-section {
+    background: url("../img/section/04.jpg") no-repeat left;
+    background-size: 50%;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.about-container {
+    width: 50%;
+    float: right;
+    background-color: var(--text-secondary);
+    padding: 100px;
+}
+
+.about-container h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: var(--bg-secondary);
+}
+
+.about-container p {
+    text-align: justify;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-container {
+        padding: 80px;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .about-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+
+    .about-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-section {
+        padding: 0;
+    }
+    .about-container h1 {
+        font-size: 1.5rem;
+    }
+    .about-container {
+        padding: 40px;
+    }
+}
+
+/********** section Contats *******/
+
+.contacts-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card-contact {
+    background: var(--bg-secondary);
+    padding: 0 20px;
+    margin: 0 20px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.card-icon {
+    font-size: 2rem;
+    background: var(--bg-secondary);
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    line-height: 1.5rem !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    text-align: center;
+}
+
+.card-contact:hover .card-icon {
+    background: none;
+    color: #df49a6;
+    transform: scale(1.5);
+}
+
+.card-contact p {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+
+}
+
+.card-contact:hover p {
+    max-height: 40px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+    .contacts-section {
+        flex-direction: column;
+    }
+    .card-contact {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
 }
