@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+
 :root {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif, "Helvetica Neue";
+    font-weight: 700;
     --text-primary: #b6b6b6;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
@@ -9,11 +9,24 @@
     --transition-speed: 600ms;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     color: var(--bg-secondary);
     background-color: var(--text-secondary);
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: 0;
+}
+
+body {
+    font-size: 1.6rem;
 }
 
 body::-webkit-scrollbar {
@@ -62,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 .nav-link {
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 7rem;
     color: var(--text-primary);
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
@@ -130,210 +143,7 @@ body::-webkit-scrollbar-thumb {
     transform: rotate(-180deg);
 }
 
-/********************** Main area ***************************/
 
-.header-video-parallax-home {
-    position: relative;
-    width:100%;
-    height:100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.header-video-parallax-home:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #413b46, transparent);
-    z-index: 1;
-}
-
-.header-video-parallax-home video {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top:0;
-    left: 0;
-    object-fit: cover;
-    pointer-events: none;
-}
-
-
-#logoVideo {
-    width: 50vw;
-    opacity: 70%;
-    position: relative;
-}
-
-.content-section-products {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.content-section-products .text-box-content-products {
-    position: relative;
-    max-width: 600px;
-}
-
-.content-section-products .text-box-content-products h2 {
-    justify-content: center;
-    text-align: center;
-    font-size: 3em;
-    line-height: 1.5em;
-    font-weight: 700;
-    color: var(--bg-primary);
-    margin-bottom: 10px;
-}
-
-.content-section-products p {
-    margin: 16px 10px 16px 20px;
-    text-align: justify;
-    color: var(--bg-secondary);
-}
-
-.content-section-products .text-box-content-products a {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 8px 20px;
-    background: #df49a6;
-    color: var(--bg-secondary);
-    border-radius: 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-}
-
-/********* slider products *******/
-
-.swiper-container {
-    margin: 0 20px 0 10px;
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 180px;
-    height: 460px;
-    display: flex;
-    justify-content: center;
-}
-
-.swiper-slide img {
-    position: absolute;
-    bottom: 150px;
-    max-height: 100%;
-}
-
-.content-section-products .img-box-products {
-    width: 500px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.content-section-products .img-box-products img {
-    max-width: 150px;
-}
-
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right {
-    background-image: none;
-}
-
-@media (max-width: 991px) {
-
-    .content-section-products {
-        flex-direction: column;
-    }
-
-    .content-section-products .text-box-content-products,
-    .content-section-products .img-box-products {
-        max-width: 100%;
-    }
-
-    .swiper-slide {
-        height: 300px;
-    }
-}
-
-
-
-/* small screen  nav bar*/
-@media only screen and (max-width: 600px) {
-
-    .header-video-parallax-home {
-        bottom: 60px;
-    }
-
-    .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 5rem;
-        overflow: initial;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .navbar-nav {
-        flex-direction: row;
-    }
-
-    .link-text {
-        flex-direction: column;
-        position: absolute;
-        display: flex;
-        margin: 3rem;
-        padding-top: 50px;
-    }
-
-    .nav-link {
-        justify-content: center;
-    }
-    .nav-link svg {
-        margin: 0 1.2rem;
-    }
-    .main {
-        margin: 0;
-    }
-}
-
-/* large screen nav bar */
-@media only screen and (min-width: 600px) {
-    .navbar {
-        top: 0;
-        width: 5rem;
-        height: 100vh;
-    }
-
-    .navbar:hover {
-        width: 16rem;
-    }
-
-    .navbar:hover .link-text {
-        display: inline;
-    }
-
-    .navbar:hover .logo svg
-    {
-        margin-left: 11rem;
-    }
-
-    .navbar:hover .logo-text
-    {
-        left: 0;
-    }
-}
 
 .dark {
     --text-primary: #b6b6b6;
@@ -372,135 +182,69 @@ body::-webkit-scrollbar-thumb {
     display: block;
 }
 
-/********* section about ********/
+/* small screen  nav bar*/
+@media only screen and (max-width: 600px) {
 
-.about-section {
-    background: url("../img/section/04.jpg") no-repeat left;
-    background-size: 50%;
-    background-color: var(--bg-primary);
-    overflow: hidden;
-    padding: 100px 0;
-}
-
-.about-container {
-    width: 50%;
-    float: right;
-    background-color: var(--text-secondary);
-    padding: 100px;
-}
-
-.about-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 3rem;
-    color: var(--bg-secondary);
-}
-
-.about-container p {
-    text-align: justify;
-    line-height: 1.5rem;
-    margin-bottom: 20px;
-}
-
-@media screen and (max-width: 1200px) {
-    .about-container {
-        padding: 80px;
+    .header-video-parallax-home {
+        bottom: 60px;
     }
 
-}
-
-@media screen and (max-width: 1000px) {
-    .about-section {
-        background-size: 100%;
-        padding: 100px 40px;
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        overflow: initial;
     }
 
-    .about-container h1 {
-        font-size: 2rem;
+    .logo {
+        display: none;
     }
 
-    .about-container {
-        width: 80%;
+    .navbar-nav {
+        flex-direction: row;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .about-section {
-        padding: 0;
-    }
-    .about-container h1 {
-        font-size: 1.5rem;
-    }
-    .about-container {
-        padding: 40px;
-    }
-}
-
-/********** section Contats *******/
-
-.contacts-section {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.card-contact {
-    background: var(--bg-secondary);
-    padding: 0 20px;
-    margin: 0 20px;
-    width: calc(33% - 20px);
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-primary);
-    cursor: pointer;
-}
-
-.card-icon {
-    font-size: 2rem;
-    background: var(--bg-secondary);
-    width: 60px;
-    height: 60px;
-    align-items: center;
-    line-height: 1.5rem !important;
-    border-radius: 50%;
-    transition: 0.3s linear;
-    text-align: center;
-}
-
-.card-contact:hover .card-icon {
-    background: none;
-    color: #df49a6;
-    transform: scale(1.5);
-}
-
-.card-contact p {
-    margin-top: 20px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    max-height: 0;
-    opacity: 0;
-    transition: 0.3s linear;
-
-}
-
-.card-contact:hover p {
-    max-height: 40px;
-    opacity: 1;
-}
-
-@media screen and (max-width: 900px) {
-    .contacts-section {
+    .link-text {
         flex-direction: column;
-    }
-    .card-contact {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
+        position: absolute;
+        display: flex;
+        margin: 3rem;
+        padding-top: 50px;
     }
 
+    .nav-link {
+        justify-content: center;
+    }
+    .nav-link svg {
+        margin: 0 1.2rem;
+    }
+    .main {
+        margin: 0;
+    }
+}
+
+/* large screen nav bar */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 7rem;
+        height: 100vh;
+    }
+
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: inline;
+    }
+
+    .navbar:hover .logo svg
+    {
+        margin-left: 11rem;
+    }
+
+    .navbar:hover .logo-text
+    {
+        left: 0;
+    }
 }
